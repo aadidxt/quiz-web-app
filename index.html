@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-title">Quiz App</div>
+    </nav>
+    <div id="category-selection">
+        <h2>Select a Category</h2>
+        <button class="category-button" data-category="all">All</button>
+        <button class="category-button" data-category="C Language">C Language</button>
+        <button class="category-button" data-category="Java">Java</button>
+        <button class="category-button" data-category="CSS">CSS</button>
+        <button class="category-button" data-category="Machine Learning">Machine Learning</button>
+    </div>
+    <div id="quiz-container" class="hidden">
+        <h2 id="question">Question will appear here</h2>
+        <div id="timer-container">
+            <div id="time-bar"></div>
+        </div>
+        <div id="choices"></div>
+    </div>
+    <div id="score-container" class="hidden">
+        <h2>Quiz Results</h2>
+        <p>Total Questions: <span id="total-questions">0</span></p>
+        <p>Correct Answers: <span id="correct-answers">0</span></p>
+        <p>Incorrect Answers: <span id="incorrect-answers">0</span></p>
+        <p>Final Score: <span id="score">0</span></p>
+        <button onclick="resetQuiz()">Reset Quiz</button>
+        <button onclick="reviewQuiz()">Review Quiz</button>
+    </div>
+    <div id="review-container" class="hidden">
+        <h2>Review Your Answers</h2>
+        <div id="review-questions"></div>
+        <button onclick="resetQuiz()">Reset Quiz</button>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
